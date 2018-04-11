@@ -1,13 +1,15 @@
 body {
 		text-align: center;
-		font-family: 'New', cursive;
+		font-family: 'New';
 		background: #F09819;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #EDDE5D, #F09819);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #EDDE5D, #F09819); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to right, #f2f2f2, #dbdbdb);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f2f2f2, #dbdbdb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 }
-
+input[type=number] {
+		width: 6em;
+		margin: 20px;}
 h1 {
 		font-size: 40px;
 		width: 100%;
@@ -15,17 +17,10 @@ h1 {
 		color: white;
 }
 
-#sideBar{
-	border: 1px solid black;
-	float: left;
-	border-radius: 5px;
-	background: #000000;  /* fallback for old browsers */
-background:  #434343;  /* Chrome 10-25, Safari 5.1-6 */
-background:  #434343; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-box-shadow: 10px 10px 10px #434343;
 
+label{
+	display: inline;
 }
-
 h2 {
 		margin: 1em 0 0.25em;
 }
@@ -34,24 +29,17 @@ h2:first-of-type {
 		margin-top: 0.5em;
 }
 
-#sizePicker {
-		padding: 25px;
-		max-width: 500px;
-		width: 100%;
-		margin: 0 auto;
-}
-
-#colorPicker {
-		width:  100%;
-		max-width:  50px;
-}
 
 table,
 tr,
 td {
 		border: 1px solid black;
-}
+		box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 
+}
+tr:hover, td:hover{
+	 transition: box-shadow 0.3s ease-in-out;
+}
 table {
 		border-collapse: collapse;
 		margin: 0 auto;
@@ -61,10 +49,57 @@ tr {
 		height: 40px;
 }
 
+
 td {
 		width: 40px;
 }
 
 input[type=number] {
 		width: 6em;
+}
+
+
+
+.sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: rgba(25,25,25,0.5);
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+}
+
+.sidenav a {
+		padding: 8px 8px 8px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: black;
+		display: block;
+		transition: 0.3s;
+}
+ol{
+	margin:20px;
+}
+li{
+	margin:10px;
+}
+.sidenav a:hover {
+		color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
 }

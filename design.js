@@ -13,9 +13,16 @@ function makeGrid() {
 		let width = theWidth.val();
 
 		function addEvent(td) {
+			event.preventDefault();
 				td.addEventListener('click', function() {
 						td.style.backgroundColor = color.val();
-				});
+						// td.classList.toggle('blanktd');
+						});
+						td.addEventListener('dblclick', function(){
+							td.style.backgroundColor = "#dbdbdb";
+						})
+
+
 		}
 
 		for (let i = 0; i < height; i++) {
@@ -25,4 +32,12 @@ function makeGrid() {
 						td.addEventListener('click', addEvent(td));
 				}
 		}
+}
+
+function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
 }
